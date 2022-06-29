@@ -3,13 +3,11 @@ import axios from 'axios';
 
 import sport from '../assets/sport.png';
 
-export default function () {
+export default function Login () {
   const [emailInput, setEmailInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
   
   const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const button: HTMLButtonElement = event.currentTarget;
-
     const { REACT_APP_API_URL, REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET, REACT_APP_GRANT_TYPE } = process.env;
     
     event.preventDefault();

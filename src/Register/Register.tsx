@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import axios from "axios";
 
-export default function() {
+export default function Register () {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setemail] = useState('');
@@ -39,7 +39,7 @@ export default function() {
         }, 1000);
       })
       .catch((err) => {
-        if (err.response.status = 422) {
+        if (err.response.status === 422) {
           alert(err.response.data.message);
         } else {
           alert("User email already exists!");
